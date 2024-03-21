@@ -1,22 +1,33 @@
-#Chatbot in python 
-def chatbot(user_input):
-    responses={
-        "hi":"hello!"
-        "how are you":"I'm fine, thank you",
-        "what are you doing":"thinking about you",
-        "bye":"goodbye",
-        "default":"I didn't understand",
-    }
+def chatbot():
+  while True:
 
-    #coversion for case matching
-    user_input=user_input.lower()
+        user_input=input("\n User: ")
 
-    if user_input in responses:
-        return responses[user_input]
-    else:
-        return responses["default"]
+        if user_input=="hi":
 
-    print(chatbot("hi"))
-    print(chatbot("how are you"))
-    print(chatbot("what is the time?"))
-    print(chatbot("bye"))
+            print("dev:- hi!")
+            print("how can I help you?")
+
+        elif user_input=="what is your name":
+
+            print("dev:- my name is Dev-the friendly chatbot")
+
+        elif  user_input=="what is the date today":
+
+            from datetime import date
+
+            date=date.today()
+
+            print("dev:- today's date is ",date)
+
+        elif user_input=="bye":
+
+            print("dev:- bye!,Goodnight")
+
+            break
+
+        else:
+
+            print("dev:- sorry!...I didn't Understand")
+
+chatbot()
